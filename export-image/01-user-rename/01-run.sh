@@ -1,8 +1,5 @@
 #!/bin/bash -e
 
-# TODO: remove once changes are merged upstream
-install -v -m 755 files/userconf-service "${ROOTFS_DIR}/usr/lib/userconf-pi/userconf-service"
-
 if [[ "${DISABLE_FIRST_BOOT_USER_RENAME}" == "0" ]]; then
 	if [[ "${ENABLE_CLOUD_INIT}" != "1" ]]; then
 		on_chroot <<- EOF
